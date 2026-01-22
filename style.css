@@ -88,7 +88,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 70px;
+  padding: 0.5rem 0;
 }
 
 .logo {
@@ -106,9 +107,10 @@ body {
 }
 
 .logo-img {
-  height: 45px;
+  height: 60px;
   width: auto;
   object-fit: contain;
+  max-width: 200px;
 }
 
 .nav {
@@ -178,7 +180,7 @@ body {
 .page-hero {
   background: var(--bg-alt);
   padding: 8rem 0 4rem;
-  margin-top: 64px;
+  margin-top: 70px;
   text-align: center;
   border-bottom: 1px solid var(--border-soft);
 }
@@ -978,7 +980,7 @@ body {
 
   .nav {
     position: fixed;
-    top: 64px;
+    top: 70px;
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.98);
@@ -1092,7 +1094,8 @@ body {
   }
 
   .logo-img {
-    height: 35px;
+    height: 50px;
+    max-width: 180px;
   }
 
   .footer-logo-img {
