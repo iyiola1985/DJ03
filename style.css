@@ -1,3 +1,32 @@
+@font-face {
+  font-family: "Momo Signature";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Momo Signature"), 
+       url("fonts/MomoSignature-Regular.woff2") format("woff2"),
+       url("fonts/MomoSignature-Regular.woff") format("woff"),
+       url("fonts/MomoSignature-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+.momo-signature-regular {
+  font-family: "Momo Signature", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dj03-highlight {
+  color: var(--text);
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  display: inline-block;
+}
+
+.dj03-highlight:hover {
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(246, 57, 0, 0.5);
+}
+
 :root {
   --bg: #000000;
   --bg-alt: #0c0c0c;
@@ -39,6 +68,33 @@ body {
 .section-alt {
   background: var(--bg-alt);
   padding: 4rem 0;
+}
+
+.radio-background,
+.page-background {
+  background-image: url('DJ03 ON THE MIX.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.radio-background::before,
+.page-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 0;
+}
+
+.radio-background .container,
+.page-background .container {
+  position: relative;
+  z-index: 1;
 }
 
 .section-header {
@@ -187,7 +243,6 @@ body {
 
 .page-title {
   font-size: 3.5rem;
-  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   margin: 0 0 0.5rem;
