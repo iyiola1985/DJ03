@@ -45,11 +45,34 @@
   box-sizing: border-box;
 }
 
+/* Image Optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+img[loading="lazy"] {
+  content-visibility: auto;
+}
+
 body {
   margin: 0;
   font-family: var(--font-main);
   background: var(--bg);
   color: var(--text);
+}
+
+/* Image Optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+img[loading="lazy"] {
+  content-visibility: auto;
 }
 
 /* Containers & layout */
@@ -75,8 +98,11 @@ body {
   background-image: url('DJ03 ON THE MIX.jpeg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll; /* Changed from fixed to scroll for better performance */
   position: relative;
+  background-repeat: no-repeat;
+  will-change: transform; /* Optimize for animations */
+  transform: translateZ(0); /* Force GPU acceleration */
 }
 
 .radio-background::before,
@@ -754,10 +780,17 @@ body {
 }
 
 .video-card .video-thumb {
+  position: relative;
   border-radius: 0.8rem;
   overflow: hidden;
   margin-bottom: 0.8rem;
   border: 1px solid var(--border-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card a:hover .video-thumb {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .thumb-placeholder {
