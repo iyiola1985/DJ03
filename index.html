@@ -33,12 +33,6 @@
 
   <!-- HERO SECTION -->
   <section id="home" class="hero">
-    <!-- Replace "dj-image.jpg" with your actual image filename -->
-    <!-- Example for background video:
-    <video class="hero-video" autoplay muted loop>
-      <source src="your-video.mp4" type="video/mp4" />
-    </video>
-    -->
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <div class="hero-message">
@@ -48,276 +42,59 @@
     </div>
   </section>
 
-  <!-- MIXES / HIGHLIGHT SECTION -->
-  <section id="mixes" class="section section-alt page-background">
+  <!-- HIGHLIGHT SECTION -->
+  <section class="section section-alt page-background">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">Fresh DJ Mixes</p>
-        <h2>Latest DJ Sets & Mixes</h2>
+        <p class="section-label">WELCOME</p>
+        <h2>Experience DJ03</h2>
         <p class="section-desc">
-          Curated vibes from the club to your headphones. Press play and cruise.
+          Explore the music, videos, albums, and journey of DJ03. From Ibadan to England, bringing you the best in afrobeat and amapiano.
         </p>
       </div>
-      <div class="card-grid">
-        <article class="card">
-          <p class="card-label hot">HOT</p>
-          <h3>Summer Night Vibes</h3>
-          <p>A blend of afrobeats, amapiano, and house to light up your night.</p>
-          <a href="#" class="card-link">Listen Mix</a>
-        </article>
-        <article class="card">
-          <p class="card-label">New</p>
-          <h3>Late Night Drive</h3>
-          <p>Smooth selections for the perfect cruise control session.</p>
-          <a href="#" class="card-link">Listen Mix</a>
-        </article>
-        <article class="card">
-          <p class="card-label">Classic</p>
-          <h3>Throwback Session</h3>
-          <p>Revisit the vibes that started it all. Timeless energy.</p>
-          <a href="#" class="card-link">Listen Mix</a>
-        </article>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+        <a href="music.html" class="highlight-card-link">
+          <article class="card">
+            <h3>🎵 Music</h3>
+            <p>Listen to the latest mixes and releases from DJ03.</p>
+            <span class="card-link">Explore Music →</span>
+          </article>
+        </a>
+        <a href="videos.html" class="highlight-card-link">
+          <article class="card">
+            <h3>🎬 Videos</h3>
+            <p>Watch the latest visuals and performances.</p>
+            <span class="card-link">Watch Videos →</span>
+          </article>
+        </a>
+        <a href="albums.html" class="highlight-card-link">
+          <article class="card">
+            <h3>💿 Albums</h3>
+            <p>Browse the complete discography and gallery.</p>
+            <span class="card-link">View Albums →</span>
+          </article>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- HOT EVENT / TOUR HIGHLIGHT -->
-  <section id="tour" class="section">
+  <!-- VIDEO SECTION -->
+  <section class="section video-showcase-section page-background">
     <div class="container">
       <div class="section-header">
-        <p class="section-label hot">HOT EVENT!</p>
-        <h2>LIVE ON TOUR</h2>
+        <p class="section-label">LATEST VIDEO</p>
+        <h2>Full Charge Street UK</h2>
         <p class="section-desc">
-          Experience the energy live. Grab your tickets before they’re gone.
+          Experience the energy and vibe of DJ03 in action.
         </p>
       </div>
-
-      <div class="tour-grid">
-        <article class="card tour-card">
-          <p class="tour-date">OCTOBER 16TH, 2026</p>
-          <h3>BLACKOUT LAGOS</h3>
-          <p>Massive night of afrobeat, amapiano & more.</p>
-          <a href="#" class="btn small primary">Get Tickets</a>
-        </article>
-        <article class="card tour-card">
-          <p class="tour-date">DECEMBER 25TH, 2026</p>
-          <h3>BLACKOUT AMSTERDAM</h3>
-          <p>Christmas special in the heart of the city.</p>
-          <a href="#" class="btn small primary">Get Tickets</a>
-        </article>
-        <article class="card tour-card">
-          <p class="tour-date">JANUARY 21ST, 2027</p>
-          <h3>BLACKOUT LONDON</h3>
-          <p>UK takeover with surprise guests.</p>
-          <a href="#" class="btn small primary">Get Tickets</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEW MUSIC / EP SECTION -->
-  <section id="music" class="section section-alt page-background">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">NEW EP OUT!</p>
-        <h2>Cruise Control EP</h2>
-        <p class="section-desc">
-          A collection of carefully curated afrobeat & amapiano records for every mood.
-        </p>
-      </div>
-
-      <div class="music-layout">
-        <div class="music-artwork">
-          <!-- Replace this image with your EP cover -->
-          <img src="ABOUT DJ 03.jpg" alt="In Sound We Trust EP" style="width: 100%; height: auto; border-radius: 8px;" loading="lazy" />
+      <div class="video-showcase-container">
+        <div class="video-showcase-wrapper">
+          <video id="showcase-video" controls class="video-showcase-player" muted>
+            <source src="FULL CHARGE STREET UK-1 min (1).mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
-        <div class="music-info">
-          <h3>Tracklist</h3>
-          <ul class="tracklist">
-            <li>01 – Intro (Cruise Control)</li>
-            <li>02 – South Gidi</li>
-            <li>03 – One Condition</li>
-            <li>04 – Midnight Cruise</li>
-          </ul>
-          <div class="music-buttons">
-            <a href="#" class="btn primary">Listen Now</a>
-            <a href="#" class="btn outline">Order EP</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VIDEOS SECTION -->
-  <section id="videos" class="section">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">VIDEOS</p>
-        <h2>Latest Visuals</h2>
-      </div>
-      <div class="video-grid">
-        <!-- Replace thumbnail images and links with your own videos -->
-        <article class="video-card">
-          <a href="https://www.youtube.com/watch?v=-CK9iKfeyT8&list=RD-CK9iKfeyT8&start_radio=1" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
-            <div class="video-thumb">
-              <img src="DJ03 ON DECK.jpeg" alt="DJ03 Live" style="width: 100%; height: 200px; object-fit: cover;" loading="lazy" />
-              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 0, 0, 0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; pointer-events: none;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </div>
-            </div>
-            <h3>In Sound We Trust (Visualizer)</h3>
-            <p>DJ03</p>
-            <span class="card-link">Watch Now →</span>
-          </a>
-        </article>
-        <article class="video-card">
-          <a href="https://www.youtube.com/watch?v=-CK9iKfeyT8&list=RD-CK9iKfeyT8&start_radio=1" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
-            <div class="video-thumb">
-              <img src="DJ03 ON THE MIX.jpeg" alt="DJ03 Mixing" style="width: 100%; height: 200px; object-fit: cover;" loading="lazy" />
-              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 0, 0, 0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; pointer-events: none;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </div>
-            </div>
-            <h3>Amapiano Special Mix</h3>
-            <p>DJ03 Live Performance</p>
-            <span class="card-link">Watch Now →</span>
-          </a>
-        </article>
-        <article class="video-card">
-          <a href="https://www.youtube.com/watch?v=-CK9iKfeyT8&list=RD-CK9iKfeyT8&start_radio=1" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
-            <div class="video-thumb">
-              <img src="dj03 at work.jpeg" alt="DJ03 at Work" style="width: 100%; height: 200px; object-fit: cover;" loading="lazy" />
-              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 0, 0, 0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; pointer-events: none;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </div>
-            </div>
-            <h3>Behind The Scenes: Studio Session</h3>
-            <p>DJ03 ft. Buju & Tuface</p>
-            <span class="card-link">Watch Now →</span>
-          </a>
-        </article>
-        <article class="video-card">
-          <a href="https://www.youtube.com/watch?v=-CK9iKfeyT8&list=RD-CK9iKfeyT8&start_radio=1" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
-            <div class="video-thumb">
-              <img src="ABOUT DJ 03.jpg" alt="DJ03 YouTube Video" style="width: 100%; height: 200px; object-fit: cover;" loading="lazy" />
-              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 0, 0, 0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; pointer-events: none;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </div>
-            </div>
-            <h3>DJ03 Official Video</h3>
-            <p>Watch on YouTube</p>
-            <span class="card-link">Watch Now →</span>
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ALBUMS SECTION -->
-  <section id="albums" class="section section-alt page-background">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">ALBUMS</p>
-        <h2>Discography</h2>
-        <p class="section-desc">
-          Highlight your albums and major releases here so fans can dive into your full catalog.
-        </p>
-      </div>
-      <div class="card-grid">
-        <article class="card">
-          <p class="card-label hot">NEW</p>
-          <h3>In Sound We Trust EP</h3>
-          <p>DJ03's latest EP featuring collaborations with Buju, Tuface, and Sheyi Vibez. A perfect blend of afrobeat and amapiano showcasing his journey from Ibadan to London.</p>
-          <a href="#" class="card-link">Stream Album</a>
-        </article>
-        <article class="card">
-          <p class="card-label">FEATURED</p>
-          <h3>Amapiano Special Mix</h3>
-          <p>Curated collection of the hottest amapiano tracks from South Africa and Nigeria. DJ03's signature mixing style brings these vibes together seamlessly.</p>
-          <a href="#" class="card-link">Stream Album</a>
-        </article>
-        <article class="card">
-          <p class="card-label">CLASSIC</p>
-          <h3>Ibadan Roots Collection</h3>
-          <p>Revisit the sounds that shaped DJ03's musical foundation. Classic afrobeat tracks with modern production, honoring his Ibadan heritage.</p>
-          <a href="#" class="card-link">Stream Album</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT / NEWSLETTER -->
-  <section id="about" class="section section-alt page-background">
-    <div class="container about-layout">
-      <div>
-        <p class="section-label">ABOUT</p>
-        <h2>Trust The DJs</h2>
-        <p class="section-desc">
-          Short bio about you – your sound, your journey, and what fans can expect
-          from your sets, mixes, and releases.
-        </p>
-      </div>
-      <div class="newsletter">
-        <h3>Sign up to the mailing list</h3>
-        <p>Be first to know about new music, mixes, and tour dates.</p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Enter your email" />
-          <button type="submit" class="btn primary">Sign Up</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEWS SECTION -->
-  <section id="news" class="section">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">NEWS</p>
-        <h2>Latest Updates</h2>
-        <p class="section-desc">
-          Announce new singles, shows, collaborations, or any big moves here.
-        </p>
-      </div>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Headline One</h3>
-          <p>Brief summary of a recent announcement or achievement.</p>
-          <a href="#" class="card-link">Read More</a>
-        </article>
-        <article class="card">
-          <h3>Headline Two</h3>
-          <p>Another news item to keep your fans and followers in the loop.</p>
-          <a href="#" class="card-link">Read More</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- RADIO / PLAYLIST SECTION -->
-  <section id="radio" class="section section-alt page-background">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">RADIO</p>
-        <h2>Tunez Radio</h2>
-        <p class="section-desc">
-          Embed your radio show, podcast or curated playlists so fans can lock in anytime.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Featured Show / Playlist</h3>
-        <p>
-          Replace this area with an embedded player (SoundCloud, Mixcloud, Spotify, etc.)
-          or links to your latest radio episodes.
-        </p>
-        <a href="#" class="card-link">Open Radio</a>
       </div>
     </div>
   </section>
@@ -386,6 +163,40 @@
           body.classList.remove('menu-open');
         }
       });
+    }
+
+    // Video autoplay on scroll
+    const showcaseVideo = document.getElementById('showcase-video');
+    if (showcaseVideo) {
+      // Unmute video when user interacts with it
+      showcaseVideo.addEventListener('click', function() {
+        if (this.muted) {
+          this.muted = false;
+        }
+      });
+
+      // Also unmute when user uses controls
+      showcaseVideo.addEventListener('play', function() {
+        // Allow user to unmute via controls
+      });
+
+      const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Video is in viewport, play it
+            showcaseVideo.play().catch(error => {
+              console.log('Autoplay prevented:', error);
+            });
+          } else {
+            // Video is out of viewport, pause it
+            showcaseVideo.pause();
+          }
+        });
+      }, {
+        threshold: 0.5 // Trigger when 50% of video is visible
+      });
+
+      videoObserver.observe(showcaseVideo);
     }
   </script>
 </body>
