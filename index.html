@@ -90,7 +90,7 @@
       </div>
       <div class="video-showcase-container">
         <div class="video-showcase-wrapper">
-          <video id="showcase-video" controls class="video-showcase-player" muted>
+          <video id="showcase-video" controls class="video-showcase-player" muted preload="none" playsinline>
             <source src="FULL CHARGE STREET UK-1 min (1).mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -183,7 +183,10 @@
       const videoObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Video is in viewport, play it
+            // Video is in viewport, load and play it
+            if (showcaseVideo.readyState === 0) {
+              showcaseVideo.load(); // Load video when it comes into view
+            }
             showcaseVideo.play().catch(error => {
               console.log('Autoplay prevented:', error);
             });
@@ -193,7 +196,7 @@
           }
         });
       }, {
-        threshold: 0.5 // Trigger when 50% of video is visible
+        threshold: 0.3 // Trigger when 30% of video is visible
       });
 
       videoObserver.observe(showcaseVideo);
