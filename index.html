@@ -79,21 +79,23 @@
   </section>
 
   <!-- VIDEO SECTION -->
-  <section class="section video-showcase-section page-background">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">LATEST VIDEO</p>
-        <h2>Full Charge Street UK</h2>
-        <p class="section-desc">
-          Experience the energy and vibe of DJ03 in action.
-        </p>
-      </div>
-      <div class="video-showcase-container">
-        <div class="video-showcase-wrapper">
-          <video id="showcase-video" controls class="video-showcase-player" muted preload="none" playsinline>
-            <source src="FULL CHARGE STREET UK-1 min (1).mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+  <section class="section video-showcase-section">
+    <div class="video-background-container">
+      <video id="showcase-video" class="video-background" muted preload="none" playsinline autoplay loop>
+        <source src="FULL CHARGE STREET UK-1 min (1).mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay"></div>
+      <div class="container video-content-overlay">
+        <div class="video-text-content">
+          <p class="section-label">LATEST VIDEO</p>
+          <h2 class="video-title">Full Charge Street UK</h2>
+          <p class="video-description">
+            Experience the energy and vibe of DJ03 in action. Watch the latest performance from the streets of the UK.
+          </p>
+          <button class="btn primary video-play-btn">
+            ▶ Play Video
+          </button>
         </div>
       </div>
     </div>
@@ -165,20 +167,25 @@
       });
     }
 
-    // Video autoplay on scroll
+    // Video background autoplay on scroll
     const showcaseVideo = document.getElementById('showcase-video');
     if (showcaseVideo) {
-      // Unmute video when user interacts with it
+      // Unmute video when user clicks play button or video
       showcaseVideo.addEventListener('click', function() {
         if (this.muted) {
           this.muted = false;
         }
       });
 
-      // Also unmute when user uses controls
-      showcaseVideo.addEventListener('play', function() {
-        // Allow user to unmute via controls
-      });
+      // Handle play button click
+      const playBtn = document.querySelector('.video-play-btn');
+      if (playBtn) {
+        playBtn.addEventListener('click', function() {
+          showcaseVideo.muted = false;
+          showcaseVideo.play();
+          this.style.display = 'none'; // Hide button after clicking
+        });
+      }
 
       const videoObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -196,10 +203,10 @@
           }
         });
       }, {
-        threshold: 0.3 // Trigger when 30% of video is visible
+        threshold: 0.2 // Trigger when 20% of video section is visible
       });
 
-      videoObserver.observe(showcaseVideo);
+      videoObserver.observe(showcaseVideo.closest('.video-showcase-section'));
     }
   </script>
 </body>
