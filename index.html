@@ -7,78 +7,181 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- TOP BAR / NAV -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <div class="logo">
-        <a href="index.html"><img src="DJ03 CUT TRANS.png" alt="DJ Logo" class="logo-img" /></a>
-      </div>
-      <button class="mobile-menu-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="music.html">Music</a>
-        <a href="videos.html">Videos</a>
-        <a href="albums.html">Albums</a>
-        <a href="about.html">About</a>
-        <a href="news.html">News</a>
-        <a href="tour.html">Tour</a>
-        <a href="radio.html">Radio</a>
-      </nav>
-    </div>
-  </header>
-
   <!-- HERO SECTION -->
   <section id="home" class="hero">
+    <!-- TOP BAR / NAV - Overlay on Hero -->
+    <header class="site-header hero-header">
+      <div class="container nav-container">
+        <div class="logo">
+          <a href="index.html"><img src="DJ03 CUT TRANS.png" alt="DJ Logo" class="logo-img" /></a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="music.html">Music</a>
+          <a href="videos.html">Videos</a>
+          <a href="about.html">About</a>
+          <a href="news.html">News</a>
+          <a href="tour.html">Tickets</a>
+          <a href="radio.html">Radio</a>
+          <a href="booknow.html">Book Me</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Silk Animation Canvas -->
+    <canvas id="silk-canvas" class="silk-canvas"></canvas>
     <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <div class="hero-message">
-        <h1 class="hero-main-text">DJ03</h1>
-        <p class="hero-sub-text momo-signature-regular">In Sound We Trust</p>
+    
+    <!-- Hero Content Container -->
+    <div class="container hero-content-wrapper">
+      <div class="hero-content">
+        <div class="hero-name-section">
+          <h1 class="hero-main-text">DJ03</h1>
+          <p class="hero-sub-text">GIVING UNMATCHED VIBE AND ENERGY</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Footer -->
+    <div class="hero-footer">
+      <div class="container hero-footer-content">
+        <div class="hero-version-text">DJ03</div>
+        <button type="button" aria-label="Chat" class="hero-chat-button">
+          <svg xmlns="http://www.w3.org/2000/svg" class="hero-chat-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- HIGHLIGHT SECTION -->
-  <section class="section section-alt page-background">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">WELCOME</p>
-        <h2>Experience DJ03</h2>
-        <p class="section-desc">
-          Explore the music, videos, albums, and journey of DJ03. From Ibadan to England, bringing you the best in afrobeat and amapiano.
-        </p>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
-        <a href="music.html" class="highlight-card-link">
-          <article class="card">
-            <h3>🎵 Music</h3>
-            <p>Listen to the latest mixes and releases from DJ03.</p>
-            <span class="card-link">Explore Music →</span>
-          </article>
-        </a>
-        <a href="videos.html" class="highlight-card-link">
-          <article class="card">
-            <h3>🎬 Videos</h3>
-            <p>Watch the latest visuals and performances.</p>
-            <span class="card-link">Watch Videos →</span>
-          </article>
-        </a>
-        <a href="albums.html" class="highlight-card-link">
-          <article class="card">
-            <h3>💿 Albums</h3>
-            <p>Browse the complete discography and gallery.</p>
-            <span class="card-link">View Albums →</span>
-          </article>
-        </a>
+  <!-- TESTIMONIAL CAROUSEL SECTION -->
+  <section class="testimonial-carousel-section">
+    <div class="container testimonial-carousel-wrapper">
+      <div class="testimonial-carousel">
+        <!-- Desktop Layout -->
+        <div class="testimonial-desktop">
+          <!-- Avatar Image -->
+          <div class="testimonial-avatar">
+            <img id="testimonial-image" src="DJ03 ON THE MIX.jpeg" alt="DJ03" class="testimonial-img" />
+          </div>
+          
+          <!-- Card Content -->
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <h2 class="testimonial-name">DJ03</h2>
+              <p class="testimonial-title">DJ & Music Producer</p>
+              <p class="testimonial-description">
+                From Ibadan to England, bringing you the best in afrobeat and amapiano. Experience unmatched vibe and energy with DJ03's signature sound.
+              </p>
+              <a href="https://wa.me/447354454020" target="_blank" rel="noopener noreferrer" id="testimonial-whatsapp-btn" class="testimonial-whatsapp-btn" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.5rem;">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.77.966-.94 1.164-.17.199-.343.223-.636.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Book via WhatsApp
+              </a>
+              <div class="testimonial-social">
+                <a href="#" class="social-icon" aria-label="Twitter">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                  </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="YouTube">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                  </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Instagram">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                  </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Spotify">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Layout -->
+        <div class="testimonial-mobile">
+          <div class="testimonial-avatar-mobile">
+            <img id="testimonial-image-mobile" src="DJ03 ON THE MIX.jpeg" alt="DJ03" class="testimonial-img" />
+          </div>
+          <div class="testimonial-content-mobile">
+            <h2 class="testimonial-name">DJ03</h2>
+            <p class="testimonial-title">DJ & Music Producer</p>
+            <p class="testimonial-description">
+              From Ibadan to England, bringing you the best in afrobeat and amapiano. Experience unmatched vibe and energy with DJ03's signature sound.
+            </p>
+            <a href="https://wa.me/447354454020" target="_blank" rel="noopener noreferrer" id="testimonial-whatsapp-btn-mobile" class="testimonial-whatsapp-btn" style="display: none;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.5rem;">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.77.966-.94 1.164-.17.199-.343.223-.636.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+              Book via WhatsApp
+            </a>
+            <div class="testimonial-social">
+              <a href="#" class="social-icon" aria-label="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                </svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                </svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="Spotify">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="testimonial-nav">
+          <button class="nav-button prev-button" aria-label="Previous">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <div class="nav-dots">
+            <button class="nav-dot active" data-index="0" aria-label="Go to slide 1"></button>
+            <button class="nav-dot" data-index="1" aria-label="Go to slide 2"></button>
+            <button class="nav-dot" data-index="2" aria-label="Go to slide 3"></button>
+            <button class="nav-dot" data-index="3" aria-label="Go to slide 4"></button>
+          </div>
+          <button class="nav-button next-button" aria-label="Next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- VIDEO SECTION -->
+  <!-- VIDEO SHOWCASE SECTION -->
   <section class="section video-showcase-section">
     <div class="video-background-container">
       <video id="showcase-video" class="video-background" muted preload="none" playsinline autoplay loop>
@@ -208,6 +311,223 @@
 
       videoObserver.observe(showcaseVideo.closest('.video-showcase-section'));
     }
+
+    // Silk Background Animation
+    (function() {
+      const canvas = document.getElementById('silk-canvas');
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      let time = 0;
+      const speed = 0.02;
+      const scale = 2;
+      const noiseIntensity = 0.8;
+
+      const resizeCanvas = () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      };
+
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+
+      // Simple noise function
+      const noise = (x, y) => {
+        const G = 2.71828;
+        const rx = G * Math.sin(G * x);
+        const ry = G * Math.sin(G * y);
+        return (rx * ry * (1 + x)) % 1;
+      };
+
+      const animate = () => {
+        const { width, height } = canvas;
+        
+        // Create transparent background (we want to blend with the image)
+        ctx.clearRect(0, 0, width, height);
+
+        // Create silk-like pattern
+        const imageData = ctx.createImageData(width, height);
+        const data = imageData.data;
+
+        for (let x = 0; x < width; x += 2) {
+          for (let y = 0; y < height; y += 2) {
+            const u = (x / width) * scale;
+            const v = (y / height) * scale;
+            
+            const tOffset = speed * time;
+            let tex_x = u;
+            let tex_y = v + 0.03 * Math.sin(8.0 * tex_x - tOffset);
+
+            const pattern = 0.6 + 0.4 * Math.sin(
+              5.0 * (tex_x + tex_y + 
+                Math.cos(3.0 * tex_x + 5.0 * tex_y) + 
+                0.02 * tOffset) +
+              Math.sin(20.0 * (tex_x + tex_y - 0.1 * tOffset))
+            );
+
+            const rnd = noise(x, y);
+            const intensity = Math.max(0, pattern - rnd / 15.0 * noiseIntensity);
+            
+            // Purple-gray silk color (adjust to match your theme)
+            const r = Math.floor(123 * intensity);
+            const g = Math.floor(116 * intensity);
+            const b = Math.floor(129 * intensity);
+            const a = Math.floor(180 * intensity); // Semi-transparent
+
+            const index = (y * width + x) * 4;
+            if (index < data.length - 3) {
+              data[index] = r;
+              data[index + 1] = g;
+              data[index + 2] = b;
+              data[index + 3] = a;
+            }
+          }
+        }
+
+        ctx.putImageData(imageData, 0, 0);
+        time += 1;
+        requestAnimationFrame(animate);
+      };
+
+      animate();
+    })();
+
+    // Testimonial Carousel
+    (function() {
+      const testimonials = [
+        {
+          image: 'DJ03 ON THE MIX.jpeg',
+          name: 'DJ03',
+          title: 'DJ & Music Producer',
+          description: 'From Ibadan to England, bringing you the best in afrobeat and amapiano. Experience unmatched vibe and energy with DJ03\'s signature sound.',
+          whatsapp: false
+        },
+        {
+          image: 'dj03 mixing.jpeg',
+          name: 'DJ03',
+          title: 'Live Performer',
+          description: 'Creating unforgettable experiences on stage. DJ03 brings energy and connection to every performance, mixing the best of afrobeat and amapiano.',
+          whatsapp: false
+        },
+        {
+          image: 'DJ03 ON DECK.jpeg',
+          name: 'DJ03',
+          title: 'Music Curator',
+          description: 'Discovering and sharing the hottest tracks. DJ03 curates the perfect blend of sounds that keep the party going and the vibes flowing.',
+          whatsapp: false
+        },
+        {
+          image: 'DJ03 SIPPING.jpeg',
+          name: 'Book DJ03',
+          title: 'Available for Bookings',
+          description: 'Ready to bring unmatched vibe and energy to your event? Book DJ03 for your next party, club night, or special occasion. Contact via WhatsApp to discuss your event.',
+          whatsapp: true,
+          whatsappLink: 'https://wa.me/447354454020'
+        }
+      ];
+
+      let currentIndex = 0;
+      const desktopImage = document.getElementById('testimonial-image');
+      const mobileImage = document.getElementById('testimonial-image-mobile');
+      const prevButton = document.querySelector('.prev-button');
+      const nextButton = document.querySelector('.next-button');
+      const dots = document.querySelectorAll('.nav-dot');
+
+      const updateCarousel = () => {
+        const testimonial = testimonials[currentIndex];
+        
+        // Fade out
+        if (desktopImage) {
+          desktopImage.style.opacity = '0';
+        }
+        if (mobileImage) {
+          mobileImage.style.opacity = '0';
+        }
+
+        setTimeout(() => {
+          // Update content
+          if (desktopImage) {
+            desktopImage.src = testimonial.image;
+            desktopImage.alt = testimonial.name;
+          }
+          if (mobileImage) {
+            mobileImage.src = testimonial.image;
+            mobileImage.alt = testimonial.name;
+          }
+
+          // Update text (if needed, though it's the same for all)
+          const nameElements = document.querySelectorAll('.testimonial-name');
+          const titleElements = document.querySelectorAll('.testimonial-title');
+          const descElements = document.querySelectorAll('.testimonial-description');
+          
+          nameElements.forEach(el => el.textContent = testimonial.name);
+          titleElements.forEach(el => el.textContent = testimonial.title);
+          descElements.forEach(el => el.textContent = testimonial.description);
+
+          // Show/hide WhatsApp button
+          const whatsappBtn = document.getElementById('testimonial-whatsapp-btn');
+          const whatsappBtnMobile = document.getElementById('testimonial-whatsapp-btn-mobile');
+          const socialIcons = document.querySelectorAll('.testimonial-social');
+          
+          if (testimonial.whatsapp) {
+            if (whatsappBtn) whatsappBtn.style.display = 'flex';
+            if (whatsappBtnMobile) whatsappBtnMobile.style.display = 'flex';
+            socialIcons.forEach(el => el.style.display = 'none');
+          } else {
+            if (whatsappBtn) whatsappBtn.style.display = 'none';
+            if (whatsappBtnMobile) whatsappBtnMobile.style.display = 'none';
+            socialIcons.forEach(el => el.style.display = 'flex');
+          }
+
+          // Fade in
+          if (desktopImage) {
+            desktopImage.style.opacity = '1';
+          }
+          if (mobileImage) {
+            mobileImage.style.opacity = '1';
+          }
+        }, 200);
+
+        // Update dots
+        dots.forEach((dot, index) => {
+          if (index === currentIndex) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      };
+
+      const nextSlide = () => {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        updateCarousel();
+      };
+
+      const prevSlide = () => {
+        currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+        updateCarousel();
+      };
+
+      if (prevButton) {
+        prevButton.addEventListener('click', prevSlide);
+      }
+      if (nextButton) {
+        nextButton.addEventListener('click', nextSlide);
+      }
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          currentIndex = index;
+          updateCarousel();
+        });
+      });
+
+      // Initialize
+      updateCarousel();
+    })();
+
   </script>
 </body>
 </html>

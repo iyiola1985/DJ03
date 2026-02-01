@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Tour - DJ Landing Page</title>
+  <title>Tickets - DJ Landing Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -22,11 +22,11 @@
         <a href="index.html">Home</a>
         <a href="music.html">Music</a>
         <a href="videos.html">Videos</a>
-        <a href="albums.html">Albums</a>
         <a href="about.html">About</a>
         <a href="news.html">News</a>
-        <a href="tour.html" class="active">Tour</a>
+        <a href="tour.html" class="active">Tickets</a>
         <a href="radio.html">Radio</a>
+        <a href="booknow.html">Book Me</a>
       </nav>
     </div>
   </header>
@@ -34,53 +34,496 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <h1 class="page-title">Tour</h1>
-      <p class="page-subtitle">Live On Tour</p>
+      <h1 class="page-title momo-signature-regular">Book DJ03</h1>
+      <p class="page-subtitle">Book Your Event Experience</p>
     </div>
   </section>
 
-  <!-- TOUR SECTION -->
-  <section class="section section-alt page-background">
+  <!-- BOOKING PROCESS SECTION -->
+  <section class="section">
     <div class="container">
       <div class="section-header">
-        <p class="section-label hot">HOT EVENT!</p>
-        <h2>LIVE ON TOUR</h2>
+        <p class="section-label">HOW IT WORKS</p>
+        <h2 class="momo-signature-regular">Simple Booking Process</h2>
         <p class="section-desc">
-          Experience the energy live. Grab your tickets before they're gone.
+          Follow these easy steps to book DJ03 for your event
         </p>
       </div>
 
-      <div class="tour-grid">
-        <article class="card tour-card">
-          <p class="tour-date">MARCH 15TH, 2026</p>
-          <h3>LONDON - O2 Academy Brixton</h3>
-          <p>DJ03 brings the heat to London with special guests Buju & Tuface. Massive night of afrobeat, amapiano & more.</p>
-          <a href="#" class="btn small primary">Get Tickets</a>
-        </article>
-        <article class="card tour-card">
-          <p class="tour-date">APRIL 20TH, 2026</p>
-          <h3>MANCHESTER - Victoria Warehouse</h3>
-          <p>UK tour continues in Manchester. Experience the energy live with DJ03's signature sound.</p>
-          <a href="#" class="btn small primary">Get Tickets</a>
-        </article>
-        <article class="card tour-card">
-          <p class="tour-date">MAY 25TH, 2026</p>
-          <h3>BIRMINGHAM - O2 Institute</h3>
-          <p>Midlands takeover with surprise guests. Pure afrobeat and amapiano vibes.</p>
-          <a href="#" class="btn small primary">Get Tickets</a>
-        </article>
-        <article class="card tour-card">
-          <p class="tour-date">JUNE 30TH, 2026</p>
-          <h3>LAGOS - Eko Hotel & Suites</h3>
-          <p>Homecoming show in Lagos! DJ03 returns to Ibadan roots with a massive performance.</p>
-          <a href="#" class="btn small primary">Get Tickets</a>
-        </article>
-        <article class="card tour-card">
-          <p class="tour-date">JULY 15TH, 2026</p>
-          <h3>LONDON - Printworks</h3>
-          <p>Summer special at Printworks. Featuring collaborations with Sheyi Vibez and more.</p>
-          <a href="#" class="btn small primary">Get Tickets</a>
-        </article>
+      <div class="booking-steps">
+        <div class="booking-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Select a Date & Time</h3>
+            <p>Choose your preferred date and time from our availability calendar.</p>
+          </div>
+        </div>
+        <div class="booking-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Tell Us About Your Event</h3>
+            <p>Provide details about your event type, venue, and specific requirements.</p>
+          </div>
+        </div>
+        <div class="booking-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Consultation Call</h3>
+            <p>Our team will contact you to discuss your needs in detail.</p>
+          </div>
+        </div>
+        <div class="booking-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Confirmation</h3>
+            <p>Receive your booking confirmation and prepare for an amazing event.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM SECTION -->
+  <section class="section section-alt page-background">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label hot">BOOK NOW</p>
+        <h2 class="momo-signature-regular">Submit Your Booking Request</h2>
+        <p class="section-desc">
+          Fill out the form below with your event details. Our team will contact you within 24-48 hours to confirm your booking.
+        </p>
+      </div>
+
+      <div class="booking-form-container">
+        <form class="booking-form-main" id="booking-form">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="event-date">Event Date *</label>
+              <input type="date" id="event-date" name="event-date" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label for="event-time">Event Time *</label>
+              <input type="time" id="event-time" name="event-time" class="form-input" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="event-type">Event Type *</label>
+            <select id="event-type" name="event-type" class="form-input" required>
+              <option value="">Select event type</option>
+              <option value="wedding">Wedding</option>
+              <option value="birthday">Birthday Party</option>
+              <option value="corporate">Corporate Event</option>
+              <option value="club">Club Night</option>
+              <option value="festival">Festival</option>
+              <option value="private">Private Party</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="venue-location">Venue/Location *</label>
+            <input type="text" id="venue-location" name="venue-location" class="form-input" placeholder="Enter venue name and address" required />
+          </div>
+
+          <div class="form-group">
+            <label for="event-details">Event Details & Requirements *</label>
+            <textarea id="event-details" name="event-details" class="form-input" rows="5" placeholder="Tell us about your event, expected number of guests, special requirements, etc." required></textarea>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="full-name">Full Name *</label>
+              <input type="text" id="full-name" name="full-name" class="form-input" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="+44 7XXX XXXXXX" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="budget">Budget Range (Optional)</label>
+            <select id="budget" name="budget" class="form-input">
+              <option value="">Select budget range</option>
+              <option value="under-500">Under £500</option>
+              <option value="500-1000">£500 - £1,000</option>
+              <option value="1000-2500">£1,000 - £2,500</option>
+              <option value="2500-5000">£2,500 - £5,000</option>
+              <option value="over-5000">Over £5,000</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn primary btn-booking-large">
+            Submit Booking Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHATSAPP BOOKING SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">ALTERNATIVE</p>
+        <h2 class="momo-signature-regular">Or Book via WhatsApp</h2>
+        <p class="section-desc">
+          Prefer to chat directly? Contact us on WhatsApp for instant responses and quick booking.
+        </p>
+      </div>
+
+      <div class="whatsapp-booking-container">
+        <div class="whatsapp-booking-card">
+          <div class="whatsapp-booking-header">
+            <div class="whatsapp-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.77.966-.94 1.164-.17.199-.343.223-.636.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+            </div>
+            <div class="whatsapp-booking-title">
+              <h3>Select a Date & Time</h3>
+              <p>Choose from our available slots and tell us about your event</p>
+            </div>
+          </div>
+
+          <div class="whatsapp-features">
+            <div class="whatsapp-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <div>
+                <strong>Choose Your Date</strong>
+                <p>Tell us when you need our services</p>
+              </div>
+            </div>
+            <div class="whatsapp-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <div>
+                <strong>Event Location</strong>
+                <p>Share your venue details</p>
+              </div>
+            </div>
+            <div class="whatsapp-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <div>
+                <strong>Quick Response</strong>
+                <p>Get instant replies on WhatsApp</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="whatsapp-cta">
+            <div class="whatsapp-cta-info">
+              <h4>Contact on WhatsApp</h4>
+              <p>Available 24/7 • Quick Response Guaranteed</p>
+            </div>
+            <a href="https://wa.me/447354454020" target="_blank" rel="noopener noreferrer" class="btn primary whatsapp-btn-large">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.75rem;">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.77.966-.94 1.164-.17.199-.343.223-.636.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+              Book via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">HELP & SUPPORT</p>
+        <h2 class="momo-signature-regular">Frequently Asked Questions</h2>
+        <p class="section-desc">
+          Common questions about our booking process and services
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How far in advance should I book?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>We recommend booking at least 4-6 weeks in advance for standard events, and 2-3 months for large events or peak season dates (May-September and December).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Is a deposit required to secure a booking?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, a 30% deposit is required to secure your booking. The remaining balance is due one week before your event date.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What happens after I submit my booking request?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Our team will review your request and contact you within 24-48 hours to discuss details and provide a customized quote.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Do you provide all necessary equipment?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, we provide all sound and lighting equipment needed for your event, including setup, operation, and teardown.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can I modify my booking after confirmation?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, modifications can be made up to 2 weeks before your event, subject to equipment and staff availability.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What is your cancellation policy?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Cancellations made 30+ days before the event receive a full deposit refund. Cancellations within 14-30 days receive a 50% deposit refund. Cancellations under 14 days are non-refundable.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OLD BOOKING SECTION (REMOVED) -->
+  <section class="section section-alt page-background" style="display: none;">
+        <!-- Event Selection -->
+        <div class="ticket-events">
+          <h3 class="ticket-section-title">Upcoming Events</h3>
+          <div class="event-list">
+            <div class="event-item active" data-event="london">
+              <div class="event-date">MARCH 15TH, 2026</div>
+              <div class="event-venue">LONDON - O2 Academy Brixton</div>
+              <div class="event-desc">DJ03 brings the heat to London with special guests Buju & Tuface</div>
+            </div>
+            <div class="event-item" data-event="manchester">
+              <div class="event-date">APRIL 20TH, 2026</div>
+              <div class="event-venue">MANCHESTER - Victoria Warehouse</div>
+              <div class="event-desc">UK tour continues in Manchester. Experience the energy live</div>
+            </div>
+            <div class="event-item" data-event="birmingham">
+              <div class="event-date">MAY 25TH, 2026</div>
+              <div class="event-venue">BIRMINGHAM - O2 Institute</div>
+              <div class="event-desc">Midlands takeover with surprise guests. Pure afrobeat and amapiano vibes</div>
+            </div>
+            <div class="event-item" data-event="lagos">
+              <div class="event-date">JUNE 30TH, 2026</div>
+              <div class="event-venue">LAGOS - Eko Hotel & Suites</div>
+              <div class="event-desc">Homecoming show in Lagos! DJ03 returns to Ibadan roots</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ticket & Booking Form -->
+        <div class="ticket-booking-form">
+          <div class="ticket-preview">
+            <div class="ticket-design">
+              <div class="ticket-header">
+                <div class="ticket-logo">
+                  <img src="DJ03 LOGO.jpeg" alt="DJ03" />
+                </div>
+                <div class="ticket-info">
+                  <h3 class="ticket-artist">DJ03</h3>
+                  <p class="ticket-tagline">Giving Unmatched Vibe and Energy</p>
+                </div>
+              </div>
+              <div class="ticket-details">
+                <div class="ticket-detail-row">
+                  <span class="ticket-label">Event:</span>
+                  <span class="ticket-value" id="ticket-event">LONDON - O2 Academy Brixton</span>
+                </div>
+                <div class="ticket-detail-row">
+                  <span class="ticket-label">Date:</span>
+                  <span class="ticket-value" id="ticket-date">MARCH 15TH, 2026</span>
+                </div>
+                <div class="ticket-detail-row">
+                  <span class="ticket-label">Tickets:</span>
+                  <span class="ticket-value" id="ticket-quantity">1 x General Admission</span>
+                </div>
+                <div class="ticket-detail-row">
+                  <span class="ticket-label">Price:</span>
+                  <span class="ticket-value" id="ticket-price">£35.00</span>
+                </div>
+              </div>
+              <div class="ticket-footer">
+                <div class="ticket-barcode">|||| |||| |||| |||| ||||</div>
+                <div class="ticket-number">#DJ03-2026-001</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="booking-form">
+            <h3 class="ticket-section-title">Booking Information</h3>
+            <form class="ticket-form" id="ticket-form">
+              <div class="form-group">
+                <label for="ticket-type">Ticket Type</label>
+                <select id="ticket-type" name="ticket-type" class="form-input" required>
+                  <option value="general">General Admission - £35.00</option>
+                  <option value="vip">VIP - £75.00</option>
+                  <option value="vip-plus">VIP Plus - £120.00</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" class="form-input" required />
+              </div>
+              <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" class="form-input" placeholder="Enter your full name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+44 7XXX XXXXXX" required />
+              </div>
+              <div class="form-total">
+                <div class="total-row">
+                  <span>Subtotal:</span>
+                  <span id="subtotal">£35.00</span>
+                </div>
+                <div class="total-row">
+                  <span>Booking Fee:</span>
+                  <span>£2.50</span>
+                </div>
+                <div class="total-row total-final">
+                  <span>Total:</span>
+                  <span id="total-amount">£37.50</span>
+                </div>
+              </div>
+
+              <!-- Payment Section -->
+              <div class="payment-section">
+                <h3 class="ticket-section-title">Payment Details</h3>
+                
+                <div class="payment-methods">
+                  <label class="payment-method-option">
+                    <input type="radio" name="payment-method" value="card" checked />
+                    <span class="payment-method-label">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                        <line x1="1" y1="10" x2="23" y2="10"/>
+                      </svg>
+                      Card Payment
+                    </span>
+                  </label>
+                  <label class="payment-method-option">
+                    <input type="radio" name="payment-method" value="paypal" />
+                    <span class="payment-method-label">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.174 1.351 1.05 3.3.93 4.855v.07h2.606c1.084 0 1.958.493 2.144 1.23.127.512-.05 1.094-.393 1.54-.23.3-.52.5-.844.6-.31.1-.66.1-1.01.1h-1.28l-.6 3.8c-.1.6-.4 1.1-.9 1.4-.4.2-.9.3-1.4.3h-2.18c-.5 0-.9.2-1.1.6l-.1.2-2.4 15.2c-.1.5-.5.9-1 .9H7.076z"/>
+                      </svg>
+                      PayPal
+                    </span>
+                  </label>
+                </div>
+
+                <div id="card-payment-form" class="payment-form-content">
+                  <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number" class="form-input" placeholder="1234 5678 9012 3456" maxlength="19" required />
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="expiry-date">Expiry Date</label>
+                      <input type="text" id="expiry-date" name="expiry-date" class="form-input" placeholder="MM/YY" maxlength="5" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="cvv">CVV</label>
+                      <input type="text" id="cvv" name="cvv" class="form-input" placeholder="123" maxlength="4" required />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="cardholder-name">Cardholder Name</label>
+                    <input type="text" id="cardholder-name" name="cardholder-name" class="form-input" placeholder="Name on card" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="billing-postcode">UK Postcode</label>
+                    <input type="text" id="billing-postcode" name="billing-postcode" class="form-input" placeholder="SW1A 1AA" required />
+                  </div>
+                </div>
+
+                <div id="paypal-payment-form" class="payment-form-content" style="display: none;">
+                  <div class="paypal-info">
+                    <p>You will be redirected to PayPal to complete your payment securely.</p>
+                    <div class="paypal-logo">
+                      <svg width="100" height="30" viewBox="0 0 100 30" fill="currentColor">
+                        <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.174 1.351 1.05 3.3.93 4.855v.07h2.606c1.084 0 1.958.493 2.144 1.23.127.512-.05 1.094-.393 1.54-.23.3-.52.5-.844.6-.31.1-.66.1-1.01.1h-1.28l-.6 3.8c-.1.6-.4 1.1-.9 1.4-.4.2-.9.3-1.4.3h-2.18c-.5 0-.9.2-1.1.6l-.1.2-2.4 15.2c-.1.5-.5.9-1 .9H7.076z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="payment-security">
+                  <div class="security-badges">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                      <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                    <span>Secure Payment</span>
+                  </div>
+                  <div class="security-badges">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                    <span>SSL Encrypted</span>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn primary btn-booking">Pay & Complete Booking</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -149,6 +592,282 @@
         }
       });
     }
+
+    // Ticket Booking Functionality
+    (function() {
+      const eventItems = document.querySelectorAll('.event-item');
+      const ticketEvent = document.getElementById('ticket-event');
+      const ticketDate = document.getElementById('ticket-date');
+      const ticketType = document.getElementById('ticket-type');
+      const quantity = document.getElementById('quantity');
+      const ticketQuantity = document.getElementById('ticket-quantity');
+      const subtotal = document.getElementById('subtotal');
+      const totalAmount = document.getElementById('total-amount');
+      const bookingForm = document.getElementById('ticket-form');
+
+      const prices = {
+        general: 35.00,
+        vip: 75.00,
+        'vip-plus': 120.00
+      };
+
+      const bookingFee = 2.50;
+
+      // Event selection
+      if (eventItems.length > 0) {
+        eventItems.forEach(item => {
+          item.addEventListener('click', function() {
+            eventItems.forEach(e => e.classList.remove('active'));
+            this.classList.add('active');
+            
+            const date = this.querySelector('.event-date').textContent;
+            const venue = this.querySelector('.event-venue').textContent;
+            
+            if (ticketDate) ticketDate.textContent = date;
+            if (ticketEvent) ticketEvent.textContent = venue;
+            
+            updateTotal();
+          });
+        });
+      }
+
+      // Update ticket preview and total
+      function updateTotal() {
+        if (!ticketType || !quantity) return;
+        
+        const selectedType = ticketType.value;
+        const qty = parseInt(quantity.value) || 1;
+        const price = prices[selectedType];
+        const subtotalValue = price * qty;
+        const total = subtotalValue + bookingFee;
+
+        if (ticketQuantity) {
+          const typeNames = {
+            general: 'General Admission',
+            vip: 'VIP',
+            'vip-plus': 'VIP Plus'
+          };
+          ticketQuantity.textContent = `${qty} x ${typeNames[selectedType]}`;
+        }
+
+        if (subtotal) subtotal.textContent = `£${subtotalValue.toFixed(2)}`;
+        if (totalAmount) totalAmount.textContent = `£${total.toFixed(2)}`;
+        
+        const ticketPriceEl = document.getElementById('ticket-price');
+        if (ticketPriceEl) ticketPriceEl.textContent = `£${price.toFixed(2)}`;
+      }
+
+      if (ticketType) {
+        ticketType.addEventListener('change', updateTotal);
+      }
+      if (quantity) {
+        quantity.addEventListener('input', updateTotal);
+      }
+
+      // Payment method toggle
+      const paymentMethods = document.querySelectorAll('input[name="payment-method"]');
+      const cardForm = document.getElementById('card-payment-form');
+      const paypalForm = document.getElementById('paypal-payment-form');
+
+      if (paymentMethods.length > 0) {
+        paymentMethods.forEach(method => {
+          method.addEventListener('change', function() {
+            if (this.value === 'card') {
+              if (cardForm) cardForm.style.display = 'block';
+              if (paypalForm) paypalForm.style.display = 'none';
+            } else if (this.value === 'paypal') {
+              if (cardForm) cardForm.style.display = 'none';
+              if (paypalForm) paypalForm.style.display = 'block';
+            }
+          });
+        });
+      }
+
+      // Card number formatting
+      const cardNumber = document.getElementById('card-number');
+      if (cardNumber) {
+        cardNumber.addEventListener('input', function(e) {
+          let value = e.target.value.replace(/\s/g, '');
+          let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+          e.target.value = formattedValue;
+        });
+      }
+
+      // Expiry date formatting
+      const expiryDate = document.getElementById('expiry-date');
+      if (expiryDate) {
+        expiryDate.addEventListener('input', function(e) {
+          let value = e.target.value.replace(/\D/g, '');
+          if (value.length >= 2) {
+            value = value.substring(0, 2) + '/' + value.substring(2, 4);
+          }
+          e.target.value = value;
+        });
+      }
+
+      // CVV formatting (numbers only)
+      const cvv = document.getElementById('cvv');
+      if (cvv) {
+        cvv.addEventListener('input', function(e) {
+          e.target.value = e.target.value.replace(/\D/g, '');
+        });
+      }
+
+      // UK Postcode formatting
+      const postcode = document.getElementById('billing-postcode');
+      if (postcode) {
+        postcode.addEventListener('input', function(e) {
+          let value = e.target.value.toUpperCase().replace(/[^A-Z0-9\s]/g, '');
+          e.target.value = value;
+        });
+      }
+
+      // Form submission
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Validate payment method
+          const selectedPayment = document.querySelector('input[name="payment-method"]:checked');
+          if (!selectedPayment) {
+            alert('Please select a payment method');
+            return;
+          }
+
+          if (selectedPayment.value === 'card') {
+            // Validate card fields
+            const cardNum = document.getElementById('card-number').value.replace(/\s/g, '');
+            const expiry = document.getElementById('expiry-date').value;
+            const cvvValue = document.getElementById('cvv').value;
+            const cardholder = document.getElementById('cardholder-name').value;
+            const postcodeValue = document.getElementById('billing-postcode').value;
+
+            if (cardNum.length < 13 || cardNum.length > 19) {
+              alert('Please enter a valid card number');
+              return;
+            }
+            if (!expiry.match(/^\d{2}\/\d{2}$/)) {
+              alert('Please enter a valid expiry date (MM/YY)');
+              return;
+            }
+            if (cvvValue.length < 3 || cvvValue.length > 4) {
+              alert('Please enter a valid CVV');
+              return;
+            }
+            if (!cardholder.trim()) {
+              alert('Please enter cardholder name');
+              return;
+            }
+            if (!postcodeValue.trim()) {
+              alert('Please enter a UK postcode');
+              return;
+            }
+
+            // Simulate payment processing
+            const btn = document.querySelector('.btn-booking');
+            if (btn) {
+              btn.textContent = 'Processing...';
+              btn.disabled = true;
+              
+              setTimeout(() => {
+                alert('Payment successful! Your tickets have been booked. You will receive a confirmation email shortly.');
+                bookingForm.reset();
+                btn.textContent = 'Pay & Complete Booking';
+                btn.disabled = false;
+                updateTotal();
+              }, 2000);
+            }
+          } else if (selectedPayment.value === 'paypal') {
+            // Redirect to PayPal (simulated)
+            if (confirm('You will be redirected to PayPal to complete your payment. Continue?')) {
+              alert('Redirecting to PayPal...\n\n(In a real application, this would redirect to PayPal checkout)');
+            }
+          }
+        });
+      }
+
+      // Initialize
+      updateTotal();
+    })();
+
+    // Booking Form Submission
+    (function() {
+      const bookingForm = document.getElementById('booking-form');
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Get form data
+          const formData = new FormData(bookingForm);
+          const data = Object.fromEntries(formData);
+          
+          // Show success message
+          const submitBtn = bookingForm.querySelector('.btn-booking-large');
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = 'Submitting...';
+          submitBtn.disabled = true;
+          
+          // Simulate form submission (in real implementation, this would send to a server)
+          setTimeout(() => {
+            submitBtn.textContent = '✓ Request Submitted!';
+            submitBtn.style.background = '#25D366';
+            submitBtn.style.borderColor = '#25D366';
+            
+            // Show success message
+            const successMsg = document.createElement('div');
+            successMsg.className = 'booking-success-message';
+            successMsg.innerHTML = `
+              <h3>Booking Request Submitted!</h3>
+              <p>Thank you for your booking request. Our team will contact you within 24-48 hours to confirm your event details.</p>
+              <p>You can also contact us directly on <a href="https://wa.me/447354454020" target="_blank" style="color: #25D366;">WhatsApp</a> for immediate assistance.</p>
+            `;
+            bookingForm.appendChild(successMsg);
+            
+            // Reset form after 3 seconds
+            setTimeout(() => {
+              bookingForm.reset();
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+              submitBtn.style.background = '';
+              submitBtn.style.borderColor = '';
+              successMsg.remove();
+            }, 5000);
+          }, 1500);
+        });
+      }
+    })();
+
+    // FAQ Accordion Functionality
+    (function() {
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          const answer = this.nextElementSibling;
+          
+          // Close all other FAQs
+          faqQuestions.forEach(q => {
+            if (q !== question) {
+              q.setAttribute('aria-expanded', 'false');
+              q.nextElementSibling.style.maxHeight = '0';
+              q.nextElementSibling.style.padding = '0 2rem';
+            }
+          });
+          
+          // Toggle current FAQ
+          if (isExpanded) {
+            this.setAttribute('aria-expanded', 'false');
+            answer.style.maxHeight = '0';
+            answer.style.padding = '0 2rem';
+          } else {
+            this.setAttribute('aria-expanded', 'true');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            answer.style.padding = '0 2rem 1.5rem';
+          }
+        });
+      });
+    })();
   </script>
 </body>
 </html>
