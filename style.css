@@ -2587,6 +2587,18 @@ img[loading="lazy"] {
 /* Responsive */
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .section-alt {
+    padding: 3rem 0;
+  }
+
   .mobile-menu-toggle {
     display: flex;
   }
@@ -3356,6 +3368,30 @@ img[loading="lazy"] {
     flex-direction: column;
     text-align: center;
     padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+    margin: 0 auto;
+  }
+
+  .step-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .step-content p {
+    font-size: 0.9rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .whatsapp-booking-container {
+    margin-top: 2rem;
+    padding: 0 1rem;
   }
 
   .whatsapp-booking-card {
@@ -3365,11 +3401,15 @@ img[loading="lazy"] {
   .whatsapp-booking-header {
     flex-direction: column;
     text-align: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
   }
 
   .whatsapp-icon-wrapper {
     width: 60px;
     height: 60px;
+    margin: 0 auto;
   }
 
   .whatsapp-icon-wrapper svg {
@@ -3377,41 +3417,135 @@ img[loading="lazy"] {
     height: 36px;
   }
 
+  .whatsapp-booking-title h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .whatsapp-booking-title p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
   .whatsapp-features {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .whatsapp-feature {
+    flex-direction: row;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .whatsapp-feature svg {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+
+  .whatsapp-feature strong {
+    font-size: 0.95rem;
+  }
+
+  .whatsapp-feature p {
+    font-size: 0.85rem;
   }
 
   .whatsapp-cta {
     flex-direction: column;
     text-align: center;
     padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .whatsapp-cta-info h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .whatsapp-cta-info p {
+    font-size: 0.9rem;
   }
 
   .whatsapp-btn-large {
     width: 100%;
     justify-content: center;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .faq-container {
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+
+  .faq-item {
+    margin-bottom: 0.75rem;
   }
 
   .faq-question {
     padding: 1.25rem 1.5rem;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+  }
+
+  .faq-question span {
+    padding-right: 0.75rem;
+    flex: 1;
+    min-width: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .faq-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
   }
 
   .faq-answer {
     padding: 0 1.5rem;
+    font-size: 0.9rem;
   }
 
   .faq-question[aria-expanded="true"] + .faq-answer {
     padding: 0 1.5rem 1.25rem;
   }
 
+  .faq-answer p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .booking-form-container {
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+
   .booking-form-main {
     padding: 2rem 1.5rem;
+  }
+
+  .booking-form-main label {
+    font-size: 0.85rem;
+  }
+
+  .booking-form-main .form-input {
+    padding: 0.875rem;
+    font-size: 0.95rem;
   }
 
   .form-row-2 {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .btn-booking-large {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
   }
 }
