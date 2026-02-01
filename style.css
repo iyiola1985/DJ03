@@ -3376,6 +3376,9 @@ img[loading="lazy"] {
     height: 50px;
     font-size: 1.25rem;
     margin: 0 auto;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2)) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 15px rgba(246, 57, 0, 0.3) !important;
   }
 
   .step-content h3 {
@@ -3410,11 +3413,14 @@ img[loading="lazy"] {
     width: 60px;
     height: 60px;
     margin: 0 auto;
+    background: #25D366 !important;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4) !important;
   }
 
   .whatsapp-icon-wrapper svg {
     width: 36px;
     height: 36px;
+    color: #fff !important;
   }
 
   .whatsapp-booking-title h3 {
@@ -3445,6 +3451,7 @@ img[loading="lazy"] {
     width: 28px;
     height: 28px;
     flex-shrink: 0;
+    color: var(--accent) !important;
   }
 
   .whatsapp-feature strong {
@@ -3460,6 +3467,8 @@ img[loading="lazy"] {
     text-align: center;
     padding: 1.5rem;
     gap: 1.5rem;
+    background: rgba(246, 57, 0, 0.1) !important;
+    border: 1px solid rgba(246, 57, 0, 0.3) !important;
   }
 
   .whatsapp-cta-info h4 {
@@ -3476,6 +3485,10 @@ img[loading="lazy"] {
     justify-content: center;
     padding: 1rem 1.5rem;
     font-size: 1rem;
+    background: #25D366 !important;
+    border-color: #25D366 !important;
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4) !important;
+    color: #fff !important;
   }
 
   .faq-container {
