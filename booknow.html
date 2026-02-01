@@ -225,37 +225,6 @@
       });
     }
 
-    // FAQ Accordion Functionality
-    (function() {
-      const faqQuestions = document.querySelectorAll('.faq-question');
-      
-      faqQuestions.forEach(question => {
-        question.addEventListener('click', function() {
-          const isExpanded = this.getAttribute('aria-expanded') === 'true';
-          const answer = this.nextElementSibling;
-          
-          // Close all other FAQs
-          faqQuestions.forEach(q => {
-            if (q !== question) {
-              q.setAttribute('aria-expanded', 'false');
-              q.nextElementSibling.style.maxHeight = '0';
-              q.nextElementSibling.style.padding = '0 2rem';
-            }
-          });
-          
-          // Toggle current FAQ
-          if (isExpanded) {
-            this.setAttribute('aria-expanded', 'false');
-            answer.style.maxHeight = '0';
-            answer.style.padding = '0 2rem';
-          } else {
-            this.setAttribute('aria-expanded', 'true');
-            answer.style.maxHeight = answer.scrollHeight + 'px';
-            answer.style.padding = '0 2rem 1.5rem';
-          }
-        });
-      });
-    })();
   </script>
 </body>
 </html>
