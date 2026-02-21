@@ -83,6 +83,72 @@
     </div>
   </section>
 
+  <!-- BOOKING FORM SECTION (new - above WhatsApp) -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label hot">SUBMIT REQUEST</p>
+        <h2 class="momo-signature-regular">Booking Form</h2>
+        <p class="section-desc">
+          Fill out the form below and we'll get back to you within 24–48 hours.
+        </p>
+      </div>
+
+      <div class="booking-form-container">
+        <div id="booking-form-message" class="booking-form-message" role="alert" aria-live="polite" style="display: none;"></div>
+        <form class="booking-form-main" id="dj03-booking-form" novalidate>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="book-fullname">Full Name <span class="required">*</span></label>
+              <input type="text" id="book-fullname" name="fullName" class="form-input" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="book-email">Email Address <span class="required">*</span></label>
+              <input type="email" id="book-email" name="email" class="form-input" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="book-phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="book-phone" name="phone" class="form-input" placeholder="+44 7XXX XXXXXX" required />
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="book-event-type">Event Type <span class="required">*</span></label>
+              <select id="book-event-type" name="eventType" class="form-input" required>
+                <option value="">Select event type</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Corporate Event">Corporate Event</option>
+                <option value="Club Event">Club Event</option>
+                <option value="Private Party">Private Party</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="book-event-date">Event Date <span class="required">*</span></label>
+              <input type="date" id="book-event-date" name="eventDate" class="form-input" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="book-location">Event Location <span class="required">*</span></label>
+            <input type="text" id="book-location" name="eventLocation" class="form-input" placeholder="Venue name and address" required />
+          </div>
+          <div class="form-group">
+            <label for="book-details">Event Details <span class="required">*</span></label>
+            <textarea id="book-details" name="eventDetails" class="form-input" placeholder="Tell us about your event – timings, guest count, music preferences, etc." required minlength="20"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="book-budget">Budget (optional)</label>
+            <input type="text" id="book-budget" name="budget" class="form-input" placeholder="e.g. £500 – £1000" />
+          </div>
+          <button type="submit" class="btn primary btn-booking-large" id="book-submit-btn">
+            Book Now
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- WHATSAPP BOOKING SECTION -->
   <section class="section section-alt page-background">
     <div class="container">
@@ -225,6 +291,89 @@
       });
     }
 
+    // Booking form – validation and submission (uses existing styles)
+    (function() {
+      var API_BASE = window.DJ03_API_URL || 'http://localhost:3000';
+      var form = document.getElementById('dj03-booking-form');
+      var msgEl = document.getElementById('booking-form-message');
+      var btn = document.getElementById('book-submit-btn');
+
+      function showMessage(text, isError) {
+        if (!msgEl) return;
+        msgEl.textContent = text;
+        msgEl.className = 'booking-form-message ' + (isError ? 'booking-form-error' : 'booking-form-success');
+        msgEl.style.display = 'block';
+      }
+
+      function clearMessage() {
+        if (msgEl) { msgEl.style.display = 'none'; msgEl.textContent = ''; }
+      }
+
+      function setLoading(loading) {
+        if (!btn) return;
+        btn.disabled = loading;
+        btn.textContent = loading ? 'Sending...' : 'Book Now';
+      }
+
+      function validateForm() {
+        var name = document.getElementById('book-fullname');
+        var email = document.getElementById('book-email');
+        var phone = document.getElementById('book-phone');
+        var eventType = document.getElementById('book-event-type');
+        var eventDate = document.getElementById('book-event-date');
+        var location = document.getElementById('book-location');
+        var details = document.getElementById('book-details');
+
+        if (!name || !name.value.trim()) { showMessage('Please enter your full name.', true); return false; }
+        if (!email || !email.value.trim()) { showMessage('Please enter your email address.', true); return false; }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) { showMessage('Please enter a valid email address.', true); return false; }
+        if (!phone || !phone.value.trim()) { showMessage('Please enter your phone number.', true); return false; }
+        if (!eventType || !eventType.value) { showMessage('Please select an event type.', true); return false; }
+        if (!eventDate || !eventDate.value) { showMessage('Please select your event date.', true); return false; }
+        if (!location || !location.value.trim()) { showMessage('Please enter the event location.', true); return false; }
+        if (!details || details.value.trim().length < 20) { showMessage('Please provide event details (at least 20 characters).', true); return false; }
+        return true;
+      }
+
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          clearMessage();
+          if (!validateForm()) return;
+
+          setLoading(true);
+          fetch(API_BASE + '/api/book', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              fullName: document.getElementById('book-fullname').value.trim(),
+              email: document.getElementById('book-email').value.trim(),
+              phone: document.getElementById('book-phone').value.trim(),
+              eventType: document.getElementById('book-event-type').value,
+              eventDate: document.getElementById('book-event-date').value,
+              eventLocation: document.getElementById('book-location').value.trim(),
+              eventDetails: document.getElementById('book-details').value.trim(),
+              budget: (document.getElementById('book-budget').value || '').trim()
+            })
+          })
+          .then(function(res) { return res.json().then(function(data) { return { ok: res.ok, data: data }; }); })
+          .then(function(_ref) {
+            var ok = _ref.ok;
+            var data = _ref.data;
+            if (ok && data.success) {
+              showMessage('✓ Message sent! Your booking request has been received. We\'ll contact you within 24–48 hours.', false);
+              form.reset();
+            } else {
+              showMessage(data.message || 'Something went wrong. Please try again or contact us via WhatsApp.', true);
+            }
+          })
+          .catch(function() {
+            showMessage('Could not send your request. Please check your connection or contact us via WhatsApp.', true);
+          })
+          .finally(function() { setLoading(false); });
+        });
+      }
+    })();
   </script>
 </body>
 </html>
