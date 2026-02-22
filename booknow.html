@@ -293,7 +293,7 @@
 
     // Booking form – validation and submission (uses existing styles)
     (function() {
-      var API_BASE = window.DJ03_API_URL || 'http://localhost:3000';
+      var API_BASE = window.DJ03_API_URL || (window.location.hostname === 'localhost' ? 'http://localhost:3000' : '');
       var form = document.getElementById('dj03-booking-form');
       var msgEl = document.getElementById('booking-form-message');
       var btn = document.getElementById('book-submit-btn');
