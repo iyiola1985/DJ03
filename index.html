@@ -4,16 +4,17 @@
   <meta charset="UTF-8" />
   <title>DJ03</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preload" as="image" href="frames/frame_0001.jpg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- HERO SECTION -->
   <section id="home" class="hero">
-    <!-- TOP BAR / NAV - Overlay on Hero -->
+    <div class="hero-pin">
     <header class="site-header hero-header">
       <div class="container nav-container">
         <div class="logo">
-          <a href="index.html"><img src="DJ03 CUT TRANS.png" alt="DJ Logo" class="logo-img" /></a>
+          <a href="index.html"><img src="dj03-logo.png" alt="DJ Logo" class="logo-img" /></a>
         </div>
         <button class="mobile-menu-toggle" aria-label="Toggle menu">
           <span></span>
@@ -32,30 +33,16 @@
         </nav>
       </div>
     </header>
-    <!-- Silk Animation Canvas -->
-    <canvas id="silk-canvas" class="silk-canvas"></canvas>
     <div class="hero-overlay"></div>
     
     <!-- Hero Content Container -->
     <div class="container hero-content-wrapper">
       <div class="hero-content">
         <div class="hero-name-section">
-          <h1 class="hero-main-text">DJ03</h1>
-          <p class="hero-sub-text">GIVING UNMATCHED VIBE AND ENERGY</p>
+          <h1 class="hero-main-text">DJ03<span class="hero-accent">Giving unmatched<br>vibe and energy.</span></h1>
         </div>
       </div>
     </div>
-
-    <!-- Hero Footer -->
-    <div class="hero-footer">
-      <div class="container hero-footer-content">
-        <div class="hero-version-text">DJ03</div>
-        <button type="button" aria-label="Chat" class="hero-chat-button">
-          <svg xmlns="http://www.w3.org/2000/svg" class="hero-chat-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-          </svg>
-        </button>
-      </div>
     </div>
   </section>
 
@@ -312,88 +299,6 @@
       videoObserver.observe(showcaseVideo.closest('.video-showcase-section'));
     }
 
-    // Silk Background Animation
-    (function() {
-      const canvas = document.getElementById('silk-canvas');
-      if (!canvas) return;
-
-      const ctx = canvas.getContext('2d');
-      if (!ctx) return;
-
-      let time = 0;
-      const speed = 0.02;
-      const scale = 2;
-      const noiseIntensity = 0.8;
-
-      const resizeCanvas = () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      };
-
-      resizeCanvas();
-      window.addEventListener('resize', resizeCanvas);
-
-      // Simple noise function
-      const noise = (x, y) => {
-        const G = 2.71828;
-        const rx = G * Math.sin(G * x);
-        const ry = G * Math.sin(G * y);
-        return (rx * ry * (1 + x)) % 1;
-      };
-
-      const animate = () => {
-        const { width, height } = canvas;
-        
-        // Create transparent background (we want to blend with the image)
-        ctx.clearRect(0, 0, width, height);
-
-        // Create silk-like pattern
-        const imageData = ctx.createImageData(width, height);
-        const data = imageData.data;
-
-        for (let x = 0; x < width; x += 2) {
-          for (let y = 0; y < height; y += 2) {
-            const u = (x / width) * scale;
-            const v = (y / height) * scale;
-            
-            const tOffset = speed * time;
-            let tex_x = u;
-            let tex_y = v + 0.03 * Math.sin(8.0 * tex_x - tOffset);
-
-            const pattern = 0.6 + 0.4 * Math.sin(
-              5.0 * (tex_x + tex_y + 
-                Math.cos(3.0 * tex_x + 5.0 * tex_y) + 
-                0.02 * tOffset) +
-              Math.sin(20.0 * (tex_x + tex_y - 0.1 * tOffset))
-            );
-
-            const rnd = noise(x, y);
-            const intensity = Math.max(0, pattern - rnd / 15.0 * noiseIntensity);
-            
-            // Purple-gray silk color (adjust to match your theme)
-            const r = Math.floor(123 * intensity);
-            const g = Math.floor(116 * intensity);
-            const b = Math.floor(129 * intensity);
-            const a = Math.floor(180 * intensity); // Semi-transparent
-
-            const index = (y * width + x) * 4;
-            if (index < data.length - 3) {
-              data[index] = r;
-              data[index + 1] = g;
-              data[index + 2] = b;
-              data[index + 3] = a;
-            }
-          }
-        }
-
-        ctx.putImageData(imageData, 0, 0);
-        time += 1;
-        requestAnimationFrame(animate);
-      };
-
-      animate();
-    })();
-
     // Testimonial Carousel
     (function() {
       const testimonials = [
@@ -529,6 +434,7 @@
     })();
 
   </script>
+  <script src="scroll-bg.js"></script>
 </body>
 </html>
 
