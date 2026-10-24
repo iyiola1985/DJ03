@@ -1,5 +1,5 @@
 (function () {
-  const FRAME_COUNT = 302;
+  const FRAME_COUNT = 240;
   const images = new Array(FRAME_COUNT);
   const stage = document.createElement("canvas");
   stage.id = "stage";
@@ -60,10 +60,13 @@
       drawWidth = canvasWidth;
       drawHeight = canvasWidth / imageRatio;
     }
+    const narrow = window.innerWidth <= 768;
+    const focusX = narrow ? 0.76 : 0.5;
+    const focusY = 0.5;
     ctx.drawImage(
       img,
-      (canvasWidth - drawWidth) / 2,
-      (canvasHeight - drawHeight) / 2,
+      (canvasWidth - drawWidth) * focusX,
+      (canvasHeight - drawHeight) * focusY,
       drawWidth,
       drawHeight
     );
